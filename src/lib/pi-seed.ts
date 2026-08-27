@@ -108,6 +108,32 @@ const docs: PIDoc[] = [
     materialDocNo: "4900001873",
     postedOn: iso(-15),
   }),
+  doc(
+    "0100000438",
+    "0003",
+    -24,
+    "POSTED",
+    [
+      { matnr: "MAT-103311", book: 1500, count: 1428 },
+      { matnr: "MAT-104020", book: 880, count: 879 },
+    ],
+    { materialDocNo: "4900001868", postedOn: iso(-24) },
+  ),
+  doc("0100000439", "0002", -26, "POSTED", [{ matnr: "MAT-105644", book: 305, count: 281 }], {
+    materialDocNo: "4900001869",
+    postedOn: iso(-26),
+  }),
+  doc(
+    "0100000440",
+    "0004",
+    -28,
+    "POSTED",
+    [
+      { matnr: "MAT-106510", book: 1740, count: 1737 },
+      { matnr: "MAT-106001", book: 260, count: 236 },
+    ],
+    { materialDocNo: "4900001870", postedOn: iso(-28) },
+  ),
 ];
 
 export function createInitialState(): AppState {

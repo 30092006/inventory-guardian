@@ -72,10 +72,10 @@ export const SUPERVISOR = "R. Vogel (Inventory Supervisor)";
 
 // ---------------------------------------------------------------- helpers
 export const eur = (n: number) =>
-  `${n < 0 ? "-" : ""}€${Math.abs(Math.round(n)).toLocaleString("de-DE")}`;
+  `${n < 0 ? "-" : ""}€${Math.abs(Math.round(n)).toLocaleString("en-US")}`;
 
 export const num = (n: number, d = 0) =>
-  n.toLocaleString("de-DE", { minimumFractionDigits: d, maximumFractionDigits: d });
+  n.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
 
 export function daysOverdue(plannedDate: string, today = new Date()): number {
   const d = Math.floor((today.getTime() - new Date(plannedDate).getTime()) / 86_400_000);
