@@ -12,7 +12,7 @@ import { Field, MessageStrip, Pill } from "./ui";
 import { ProcessFlow } from "./ProcessFlow";
 import { AIPanel } from "./AIPanel";
 
-type Msg = { kind: "success" | "error" | "info"; code?: string; text: string } | null;
+type Msg = { kind: "success" | "error" | "info"; code?: string | undefined; text: string } | null;
 
 export function DocDetail({ docId }: { docId: string }) {
   const { calcs, recFor, enterCount, post, recount, approve } = usePI();

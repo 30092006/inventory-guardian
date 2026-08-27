@@ -49,9 +49,9 @@ export function MessageStrip({
   onClose,
 }: {
   kind: "success" | "error" | "info";
-  code?: string;
+  code?: string | undefined;
   children: ReactNode;
-  onClose?: () => void;
+  onClose?: (() => void) | undefined;
 }) {
   const map = {
     success: "bg-good-soft border-good/30 text-good",
