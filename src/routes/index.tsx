@@ -35,8 +35,12 @@ export const Route = createFileRoute("/")({
 
 function Cockpit() {
   const { queue, state, reset } = usePI();
-  const [selected, setSelected] = useState<string | null>(null);
-  const activeId = selected ?? queue[0]?.calc.doc.id ?? state.docs[0]!.id;
+  const [selected, setSelected] = useState<string>(
+    () => queue[0]?.calc.doc.id ?? state.docs[0]!.id,
+  );
+  const activeId = state.docs.some((d) => d.id === selected)
+    ? selected
+    : (queue[0]?.calc.doc.id ?? state.docs[0]!.id);
 
   return (
     <div className="min-h-screen bg-background">
@@ -59,8 +63,8 @@ function Cockpit() {
             </span>
             <button
               onClick={() => {
-                setSelected(null);
                 reset();
+                setSelected("0100000451");
               }}
               className="rounded border border-shell-foreground/25 px-2 py-1 font-medium transition-colors hover:bg-shell-foreground/10"
             >
