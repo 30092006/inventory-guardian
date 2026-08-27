@@ -78,7 +78,7 @@ function Cockpit() {
         <KpiStrip />
 
         <div className="grid gap-3 lg:grid-cols-[minmax(300px,360px)_1fr] xl:grid-cols-[380px_1fr]">
-          <div className="lg:sticky lg:top-[60px] lg:max-h-[calc(100vh-76px)]">
+          <div className="max-h-[55vh] lg:sticky lg:top-[60px] lg:max-h-[calc(100vh-76px)]">
             <WorkQueue selectedId={activeId} onSelect={setSelected} />
           </div>
           <div className="min-w-0 space-y-3">
